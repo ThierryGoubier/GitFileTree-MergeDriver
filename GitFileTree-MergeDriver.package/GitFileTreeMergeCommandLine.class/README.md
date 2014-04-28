@@ -1,0 +1,1 @@
+Usage: mergeDriver ( --version | --methodProperties | --properties ) ancestor current other

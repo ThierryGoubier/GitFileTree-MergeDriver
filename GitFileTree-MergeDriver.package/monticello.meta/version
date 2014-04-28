@@ -1,1 +1,2 @@
-(name 'GitFileTree-MergeDriver-ThierryGoubier.1' message 'bare code for merging version and method properties (tested).' id '58197633-ca69-49ed-bf8d-6f00abb6ea5d' date '28 April 2014' time '5:28:08.001951 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'GitFileTree-MergeDriver-ThierryGoubier.2' message 'Start of command line handler, ensure merge.' id '63d74c98-fe46-40db-a656-fe55d03af9e0' date '28 April 2014' time '11:15:15.076401 pm' author 'ThierryGoubier' ancestors ((name 'GitFileTree-MergeDriver-ThierryGoubier.1' message 'bare code for merging version and method properties (tested).
+' id 'cc640354-36a5-5ae7-97c4-8408143b0436' date '28 April 2014' time '5:28:08 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
