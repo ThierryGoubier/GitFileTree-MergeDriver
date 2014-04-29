@@ -25,8 +25,8 @@ Add, in each .package directory, a .gitattributes file containing the following:
 
 ```
 /monticello.meta/version		          merge=mcVersion
-/*.class/methodProperties.json				merge=mcMethodProperties
-/*.class/properties.json							merge=mcProperties
+/*.class/methodProperties.json                    merge=mcMethodProperties
+/*.class/properties.json                          merge=mcProperties
 ```
 
 Now, you should be able to merge with git and have a minimum of conflicts.
