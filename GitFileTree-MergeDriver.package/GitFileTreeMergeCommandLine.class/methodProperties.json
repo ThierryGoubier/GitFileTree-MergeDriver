@@ -1,10 +1,11 @@
 {
 	"class" : {
-		"commandName" : "ThierryGoubier 4/28/2014 20:53",
-		"description" : "ThierryGoubier 4/28/2014 20:54" },
+		"commandName" : "ThierryGoubier 4/29/2014 07:26:52",
+		"description" : "ThierryGoubier 4/29/2014 07:26:52" },
 	"instance" : {
-		"activate" : "ThierryGoubier 4/28/2014 20:56",
-		"argumentsWithoutOptions" : "ThierryGoubier 4/28/2014 23:12",
-		"mergeMethodProperties" : "ThierryGoubier 4/29/2014 07:08",
-		"mergeProperties" : "ThierryGoubier 4/29/2014 07:08",
-		"mergeVersion" : "ThierryGoubier 4/29/2014 07:26" } }
+		"activate" : "ThierryGoubier 4/29/2014 07:26:52",
+		"argumentsAsFileReferences" : "ThierryGoubier 4/29/2014 11:32",
+		"argumentsWithoutOptions" : "ThierryGoubier 4/29/2014 07:26:52",
+		"mergeMethodProperties" : "ThierryGoubier 4/29/2014 15:12",
+		"mergeProperties" : "ThierryGoubier 4/29/2014 15:12",
+		"mergeVersion" : "ThierryGoubier 4/29/2014 15:12" } }

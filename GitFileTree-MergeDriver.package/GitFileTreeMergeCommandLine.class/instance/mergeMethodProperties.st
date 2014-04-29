@@ -1,11 +1,7 @@
 actions
 mergeMethodProperties
 	| args |
-	args := self argumentsWithoutOptions.
-	[ 
-	GitFileTreeMergeDriver new
-		mergeMethodProperties: args first asFileReference
-		with: args second asFileReference
-		and: args third asFileReference ]
+	args := self argumentsAsFileReferences.
+	[ GitFileTreeMergeDriver new mergeMethodProperties: args first with: args second and: args third ]
 		on: Error
-		do: [ self exitFailure ]
+		do: [ :ex | self exitFailure: 'GitFileTree-MergeDriver: ' , ex description ]
