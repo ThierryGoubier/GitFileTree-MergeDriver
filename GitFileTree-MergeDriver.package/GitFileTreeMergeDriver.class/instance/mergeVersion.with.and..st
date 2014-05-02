@@ -3,24 +3,14 @@ mergeVersion: ancestor with: current and: other
 	"Looks like a two way merge, but MC will do a proper three way merge and find the common ancestor."
 
 	| mcCurrentInfo mcOtherInfo mcMergedInfo ancestry name versionA versionB versionMerged infoWriter |
-	mcCurrentInfo := MCWorkingCopy
-		infoFromDictionary: (MCFileTreeAbstractReader new associate: (MCScanner scan: current readStream))
-		cache: Dictionary new.
-	mcOtherInfo := MCWorkingCopy
-		infoFromDictionary: (MCFileTreeAbstractReader new associate: (MCScanner scan: other readStream))
-		cache: Dictionary new.
+	mcCurrentInfo := self getVersionInfoFrom: current.
+	mcOtherInfo := self getVersionInfoFrom: other.
 	ancestry := MCWorkingAncestry new
 		addAncestor: mcCurrentInfo;
 		addAncestor: mcOtherInfo.	"Now I need to generate a new name."
-	versionA := (mcCurrentInfo name copyAfterLast: $-) copyAfterLast: $..
-	(versionA notEmpty and: [ versionA allSatisfy: [ :each | each isDigit ] ])
-		ifTrue: [ versionA := versionA asNumber ]
-		ifFalse: [ versionA := 0 ].
+	versionA := self getVersionNoFromName: (mcCurrentInfo name).
 	name := mcCurrentInfo name copyUpToLast: $-.
-	versionB := (mcOtherInfo name copyAfterLast: $-) copyAfterLast: $..
-	(versionB notEmpty and: [ versionB allSatisfy: [ :each | each isDigit ] ])
-		ifTrue: [ versionB := versionA asNumber ]
-		ifFalse: [ versionB := 0 ].
+	versionB :=  self getVersionNoFromName: (mcOtherInfo name).
 	versionMerged := (versionA max: versionB) + 1.
 	mcMergedInfo := MCVersionInfo
 		name: name , '-' , mcCurrentInfo author , '.' , versionMerged printString

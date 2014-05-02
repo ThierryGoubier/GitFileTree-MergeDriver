@@ -2,6 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"mergeClassProperties:with:and:" : "ThierryGoubier 4/29/2014 07:26:52",
-		"mergeMethodProperties:with:and:" : "ThierryGoubier 4/29/2014 07:26:52",
-		"mergeVersion:with:and:" : "ThierryGoubier 4/29/2014 07:26:52" } }
+		"getTimeStampFrom:" : "ThierryGoubier 5/2/2014 13:24",
+		"getVersionInfoFrom:" : "ThierryGoubier 5/1/2014 22:45",
+		"getVersionNoFromName:" : "ThierryGoubier 5/1/2014 22:48",
+		"mergeClassProperties:with:and:" : "ThierryGoubier 4/29/2014 15:13:23",
+		"mergeMethodProperties:with:and:" : "ThierryGoubier 5/2/2014 13:14",
+		"mergeVersion:with:and:" : "ThierryGoubier 5/1/2014 22:50" } }

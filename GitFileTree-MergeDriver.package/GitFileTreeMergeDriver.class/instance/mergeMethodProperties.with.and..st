@@ -12,7 +12,7 @@ mergeMethodProperties: ancestor with: current and: other
 				keysAndValuesDo: [ :key :valueA | 
 					((otherProperties at: mainKey) at: key ifAbsent: [  ])
 						ifNotNil: [ :valueB | 
-							(DateAndTime fromMethodTimeStamp: valueB) > (DateAndTime fromMethodTimeStamp: valueA)
+							(self getTimeStampFrom: valueB) > (self getTimeStampFrom: valueA)
 								ifTrue: [ (mergedProperties at: mainKey) at: key put: valueB ] ] ].
 			(otherProperties at: mainKey)
 				keysAndValuesDo: [ :key :valueB | (currentProperties at: mainKey) at: key ifAbsent: [ (mergedProperties at: mainKey) at: key put: valueB ] ] ].	"Write propertiesMerged."
