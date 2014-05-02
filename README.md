@@ -14,7 +14,18 @@ Gofer new
 	load
 ```
 
-Add, in ~/.gitconfig or whichever place it is in your git setup, the following (depending on where your image is):
+Execute the following in the shell (change the pathToPharoDir to where your pharo executable and image is):
+
+```
+$ git config --global merge.mcVersion.name "GitFileTree MergeDriver for Monticello"
+$ git config --global merge.mcVersion.driver "pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --version %O %A %B"
+$ git config --global merge.mcMethodProperties.name "GitFileTree MergeDriver for Monticello"
+$ git config --global merge.mcMethodProperties.driver "pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --methodProperties %O %A %B"
+$ git config --global merge.mcProperties.name "GitFileTree MergeDriver for Monticello"
+$ git config --global merge.mcProperties.driver "pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --properties %O %A %B"
+```
+
+In your global config file, you should now have the following :
 
 ```
 [merge "mcVersion"]
@@ -69,6 +80,7 @@ Auto-merging SmaCC-Tutorial.package/ASTExpressionNode.class/methodProperties.jso
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 See: the version file and the methodProperties.json file have been merged without conflict; and, when looking inside, the version file has the two branches versions as ancestors, and a common ancestor as well:
+
 ```smalltalk
 (
 	name 'SmaCC-Tutorial-ThierryGoubier.4'
