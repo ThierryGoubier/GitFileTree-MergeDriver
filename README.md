@@ -30,13 +30,13 @@ In your global config file, you should now have the following :
 ```
 [merge "mcVersion"]
 	name = GitFileTree MergeDriver for Monticello
-	driver = pathToPharoDir/pharo pathToPharoDir/Pharo.image mergeDriver --version %O %A %B
+	driver = pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --version %O %A %B
 [merge "mcMethodProperties"]
 	name = GitFileTree MergeDriver for Monticello
-	driver = pathToPharoDir/pharo pathToPharoDir/Pharo.image mergeDriver --methodProperties %O %A %B
+	driver = pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --methodProperties %O %A %B
 [merge "mcProperties"]
 	name = GitFileTree MergeDriver for Monticello
-	driver = pathToPharoDir/pharo pathToPharoDir/Pharo.image mergeDriver --properties %O %A %B
+	driver = pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --properties %O %A %B
 ```
 
 Add, in each .package directory, a .gitattributes file containing the following:
