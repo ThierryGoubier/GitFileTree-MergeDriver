@@ -9,12 +9,6 @@ Clone this repository (or get from here the Makefile and the merge script and pu
 
 ```
 $ make
-$ git config --global merge.mcVersion.name "GitFileTree MergeDriver for Monticello"
-$ git config --global merge.mcVersion.driver "`pwd`/merge --version %O %A %B"
-$ git config --global merge.mcMethodProperties.name "GitFileTree MergeDriver for Monticello"
-$ git config --global merge.mcMethodProperties.driver "`pwd`/merge --methodProperties %O %A %B"
-$ git config --global merge.mcProperties.name "GitFileTree MergeDriver for Monticello"
-$ git config --global merge.mcProperties.driver "`pwd`/merge --properties %O %A %B"
 ```
 
 In your global config file, you should now have the following :
