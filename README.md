@@ -5,24 +5,16 @@ This is a merge driver for git. It handles merging conflict-prone files in FileT
 
 How to make it work:
 
-Load the GitFileTree-MergeDriver package in a bare Pharo3 image (here expected to be in pathToPharoDir/).
-
-```smalltalk
-Gofer new
-	url: 'http://smalltalkhub.com/mc/ThierryGoubier/Alt30/main/';
-	package: 'GitFileTree-MergeDriver';
-	load
-```
-
-Execute the following in the shell (change the pathToPharoDir to where your pharo executable and image is):
+Clone this repository (or get from here the Makefile and the merge script and put them in a folder). Run the following command in that folder:
 
 ```
+$ make
 $ git config --global merge.mcVersion.name "GitFileTree MergeDriver for Monticello"
-$ git config --global merge.mcVersion.driver "pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --version %O %A %B"
+$ git config --global merge.mcVersion.driver "`pwd`/merge --version %O %A %B"
 $ git config --global merge.mcMethodProperties.name "GitFileTree MergeDriver for Monticello"
-$ git config --global merge.mcMethodProperties.driver "pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --methodProperties %O %A %B"
+$ git config --global merge.mcMethodProperties.driver "`pwd`/merge --methodProperties %O %A %B"
 $ git config --global merge.mcProperties.name "GitFileTree MergeDriver for Monticello"
-$ git config --global merge.mcProperties.driver "pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --properties %O %A %B"
+$ git config --global merge.mcProperties.driver "`pwd`/merge --properties %O %A %B"
 ```
 
 In your global config file, you should now have the following :
@@ -30,21 +22,21 @@ In your global config file, you should now have the following :
 ```
 [merge "mcVersion"]
 	name = GitFileTree MergeDriver for Monticello
-	driver = pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --version %O %A %B
+	driver = pathToGitFileTree-MergeDriver/merge --version %O %A %B
 [merge "mcMethodProperties"]
 	name = GitFileTree MergeDriver for Monticello
-	driver = pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --methodProperties %O %A %B
+	driver = pathToGitFileTree-MergeDriver/merge --methodProperties %O %A %B
 [merge "mcProperties"]
 	name = GitFileTree MergeDriver for Monticello
-	driver = pathToPharoDir/pharo --headless pathToPharoDir/Pharo.image mergeDriver --properties %O %A %B
+	driver = pathToGitFileTree-MergeDriver/merge --properties %O %A %B
 ```
 
-Add, in each .package directory, a .gitattributes file containing the following:
+Add, in the main repository containing your FileTree packages (for example, top level or repository/), a .gitattributes file containing the following:
 
 ```
-/monticello.meta/version		merge=mcVersion
-/*.class/methodProperties.json		merge=mcMethodProperties
-/*.class/properties.json		merge=mcProperties
+*.package/monticello.meta/version		merge=mcVersion
+*.package/*.class/methodProperties.json		merge=mcMethodProperties
+*.package/*.class/properties.json		merge=mcProperties
 ```
 
 Now, you should be able to merge with git and have a minimum of conflicts.
