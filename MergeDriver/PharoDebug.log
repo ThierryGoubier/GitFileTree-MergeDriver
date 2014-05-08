@@ -1,0 +1,1287 @@
+THERE_BE_DRAGONS_HERE
+Error: Command line handler failed
+8 May 2014 10:34:01.344256 am
+
+VM: unix - i686 - linux-gnu - NBCoInterpreter NativeBoost-CogPlugin-GuillermoPolito.19 uuid: acc98e51-2fba-4841-a965-2975997bba66 Dec 26 2013
+NBCogit NativeBoost-CogPlugin-GuillermoPolito.19 uuid: acc98e51-2fba-4841-a965-2975997bba66 Dec 26 2013
+https://github.com/pharo-project/pharo-vm.git Commit: e698e14f38003258fa49506b14307d83863a5ac1 Date: 2013-12-16 06:32:59 -0800 By: Esteban Lorenzano <estebanlm@gmail.com> Jenkins build #14780
+
+Image: Pharo3.0 [Latest update: #30847]
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:for:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+		aCommandLinehandler: 	a PharoCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+[ :exit | ^ self handleExit: exit ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+BlockClosure>>cull:
+	Receiver: [ :exit | ^ self handleExit: exit ]
+	Arguments and temporary variables: 
+		anArg: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		outerContext: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		startpc: 	73
+		numArgs: 	1
+
+
+[ self exceptionHandlerBlock cull: exception ] in MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Exit: Command line handler failed 1
+		value: 	nil
+	Receiver's instance variables: 
+		sender: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		pc: 	17
+		stackp: 	3
+		method: 	BlockClosure>>#on:do:
+		closureOrNil: 	nil
+		receiver: 	[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ ...etc...
+
+
+BlockClosure>>ensure:
+	Receiver: [ self exceptionHandlerBlock cull: exception ]
+	Arguments and temporary variables: 
+		aBlock: 	[ self exceptionHandlerIsActive: true ]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	MethodContext(ContextPart)>>handleSignal:
+		startpc: 	99
+		numArgs: 	0
+
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Exit: Command line handler failed 1
+		value: 	nil
+	Receiver's instance variables: 
+		sender: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		pc: 	17
+		stackp: 	3
+		method: 	BlockClosure>>#on:do:
+		closureOrNil: 	nil
+		receiver: 	[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ ...etc...
+
+
+Exit(Exception)>>signal
+	Receiver: Exit: Command line handler failed 1
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	'Command line handler failed'
+		tag: 	nil
+		signaler: 	a PharoCommandLineHandler
+		signalContext: 	Exit(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		status: 	1
+
+
+Exit(Exception)>>signal:
+	Receiver: Exit: Command line handler failed 1
+	Arguments and temporary variables: 
+		signalerText: 	'Command line handler failed'
+	Receiver's instance variables: 
+		messageText: 	'Command line handler failed'
+		tag: 	nil
+		signaler: 	a PharoCommandLineHandler
+		signalContext: 	Exit(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		status: 	1
+
+
+Exit class>>signalFailure:
+	Receiver: Exit
+	Arguments and temporary variables: 
+		aMessage: 	'Command line handler failed'
+	Receiver's instance variables: 
+		superclass: 	Exception
+		methodDict: 	a MethodDictionary(#defaultAction->Exit>>#defaultAction #isSuccess-...etc...
+		format: 	144
+		layout: 	a FixedLayout
+		instanceVariables: 	#('status')
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Exit
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Exceptions'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aMessage: 	'Command line handler failed'
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>error
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleArgument:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aString: 	'--nopreferences'
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | arguments first ]) ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+BlockClosure>>on:do:
+	Receiver: [ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | argument...etc...
+	Arguments and temporary variables: 
+		exception: 	Exit
+		handlerAction: 	[ :exit | ^ self handleExit: exit ]
+		handlerActive: 	false
+	Receiver's instance variables: 
+		outerContext: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		startpc: 	49
+		numArgs: 	0
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler class(CommandLineHandler class)>>activateWith:
+	Receiver: PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aCommandLine: 	a CommandLineArguments
+	Receiver's instance variables: 
+		superclass: 	BasicCommandLineHandler
+		methodDict: 	a MethodDictionary(#activate->PharoCommandLineHandler>>#activate #c...etc...
+		format: 	138
+		layout: 	a FixedLayout
+		instanceVariables: 	nil
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#PharoCommandLineHandler
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'System-CommandLine'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+[ super activateWith: aCommandLine ] in PharoCommandLineHandler class>>activateWith:
+	Receiver: PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aCommandLine: 	a CommandLineArguments
+	Receiver's instance variables: 
+		superclass: 	BasicCommandLineHandler
+		methodDict: 	a MethodDictionary(#activate->PharoCommandLineHandler>>#activate #c...etc...
+		format: 	138
+		layout: 	a FixedLayout
+		instanceVariables: 	nil
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#PharoCommandLineHandler
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'System-CommandLine'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+		queue: 	WaitfreeQueue with 0 items
+		nextInQueue: 	[ super activateWith: aCommandLine ]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldMorph>>runStepMethods
+	Receiver: a WorldMorph(511705088) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (976@662)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a SystemWindow(629932032) an Imag...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.937 g: 0.937 b: 0.937 alpha: 1.0)
+		extension: 	a MorphExtension (552861696) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.861 g: 1.0 b: 0.722 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(511705088) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (976@662)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a SystemWindow(629932032) an Imag...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.937 g: 0.937 b: 0.937 alpha: 1.0)
+		extension: 	a MorphExtension (552861696) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.861 g: 1.0 b: 0.722 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+[ 
+World doOneCycle.
+Processor yield.
+false ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		interactiveParser: 	nil
+		activeTranscript: 	Transcript
+
+
+[ 
+self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ 
+World doOneCycle.
+Processor yield.
+false ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	65
+		numArgs: 	0
+
+
+
+--- The full stack ---
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:for:
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:
+[ :exit | ^ self handleExit: exit ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+BlockClosure>>cull:
+[ self exceptionHandlerBlock cull: exception ] in MethodContext(ContextPart)>>handleSignal:
+BlockClosure>>ensure:
+MethodContext(ContextPart)>>handleSignal:
+Exit(Exception)>>signal
+Exit(Exception)>>signal:
+Exit class>>signalFailure:
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure:
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure
+PharoCommandLineHandler(BasicCommandLineHandler)>>error
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleArgument:
+[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | arguments first ]) ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+BlockClosure>>on:do:
+PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+PharoCommandLineHandler>>activate
+PharoCommandLineHandler class(CommandLineHandler class)>>activateWith:
+[ super activateWith: aCommandLine ] in PharoCommandLineHandler class>>activateWith:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+[ 
+World doOneCycle.
+Processor yield.
+false ] in MorphicUIManager>>spawnNewProcess
+[ 
+self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+-------------------------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Error: Command line handler failed
+8 May 2014 10:34:27.44525 am
+
+VM: unix - i686 - linux-gnu - NBCoInterpreter NativeBoost-CogPlugin-GuillermoPolito.19 uuid: acc98e51-2fba-4841-a965-2975997bba66 Dec 26 2013
+NBCogit NativeBoost-CogPlugin-GuillermoPolito.19 uuid: acc98e51-2fba-4841-a965-2975997bba66 Dec 26 2013
+https://github.com/pharo-project/pharo-vm.git Commit: e698e14f38003258fa49506b14307d83863a5ac1 Date: 2013-12-16 06:32:59 -0800 By: Esteban Lorenzano <estebanlm@gmail.com> Jenkins build #14780
+
+Image: Pharo3.0 [Latest update: #30847]
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:for:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+		aCommandLinehandler: 	a PharoCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+[ :exit | ^ self handleExit: exit ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+BlockClosure>>cull:
+	Receiver: [ :exit | ^ self handleExit: exit ]
+	Arguments and temporary variables: 
+		anArg: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		outerContext: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		startpc: 	73
+		numArgs: 	1
+
+
+[ self exceptionHandlerBlock cull: exception ] in MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Exit: Command line handler failed 1
+		value: 	nil
+	Receiver's instance variables: 
+		sender: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		pc: 	17
+		stackp: 	3
+		method: 	BlockClosure>>#on:do:
+		closureOrNil: 	nil
+		receiver: 	[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ ...etc...
+
+
+BlockClosure>>ensure:
+	Receiver: [ self exceptionHandlerBlock cull: exception ]
+	Arguments and temporary variables: 
+		aBlock: 	[ self exceptionHandlerIsActive: true ]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	MethodContext(ContextPart)>>handleSignal:
+		startpc: 	99
+		numArgs: 	0
+
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Exit: Command line handler failed 1
+		value: 	nil
+	Receiver's instance variables: 
+		sender: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		pc: 	17
+		stackp: 	3
+		method: 	BlockClosure>>#on:do:
+		closureOrNil: 	nil
+		receiver: 	[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ ...etc...
+
+
+Exit(Exception)>>signal
+	Receiver: Exit: Command line handler failed 1
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	'Command line handler failed'
+		tag: 	nil
+		signaler: 	a PharoCommandLineHandler
+		signalContext: 	Exit(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		status: 	1
+
+
+Exit(Exception)>>signal:
+	Receiver: Exit: Command line handler failed 1
+	Arguments and temporary variables: 
+		signalerText: 	'Command line handler failed'
+	Receiver's instance variables: 
+		messageText: 	'Command line handler failed'
+		tag: 	nil
+		signaler: 	a PharoCommandLineHandler
+		signalContext: 	Exit(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		status: 	1
+
+
+Exit class>>signalFailure:
+	Receiver: Exit
+	Arguments and temporary variables: 
+		aMessage: 	'Command line handler failed'
+	Receiver's instance variables: 
+		superclass: 	Exception
+		methodDict: 	a MethodDictionary(#defaultAction->Exit>>#defaultAction #isSuccess-...etc...
+		format: 	144
+		layout: 	a FixedLayout
+		instanceVariables: 	#('status')
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Exit
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Exceptions'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aMessage: 	'Command line handler failed'
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>error
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleArgument:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aString: 	'---no-preferences'
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | arguments first ]) ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+BlockClosure>>on:do:
+	Receiver: [ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | argument...etc...
+	Arguments and temporary variables: 
+		exception: 	Exit
+		handlerAction: 	[ :exit | ^ self handleExit: exit ]
+		handlerActive: 	false
+	Receiver's instance variables: 
+		outerContext: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		startpc: 	49
+		numArgs: 	0
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler class(CommandLineHandler class)>>activateWith:
+	Receiver: PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aCommandLine: 	a CommandLineArguments
+	Receiver's instance variables: 
+		superclass: 	BasicCommandLineHandler
+		methodDict: 	a MethodDictionary(#activate->PharoCommandLineHandler>>#activate #c...etc...
+		format: 	138
+		layout: 	a FixedLayout
+		instanceVariables: 	nil
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#PharoCommandLineHandler
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'System-CommandLine'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+[ super activateWith: aCommandLine ] in PharoCommandLineHandler class>>activateWith:
+	Receiver: PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aCommandLine: 	a CommandLineArguments
+	Receiver's instance variables: 
+		superclass: 	BasicCommandLineHandler
+		methodDict: 	a MethodDictionary(#activate->PharoCommandLineHandler>>#activate #c...etc...
+		format: 	138
+		layout: 	a FixedLayout
+		instanceVariables: 	nil
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#PharoCommandLineHandler
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'System-CommandLine'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+		queue: 	WaitfreeQueue with 0 items
+		nextInQueue: 	[ super activateWith: aCommandLine ]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldMorph>>runStepMethods
+	Receiver: a WorldMorph(511705088) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (976@662)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a SystemWindow(629932032) an Imag...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.937 g: 0.937 b: 0.937 alpha: 1.0)
+		extension: 	a MorphExtension (552861696) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.861 g: 1.0 b: 0.722 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(511705088) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (976@662)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a SystemWindow(629932032) an Imag...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.937 g: 0.937 b: 0.937 alpha: 1.0)
+		extension: 	a MorphExtension (552861696) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.861 g: 1.0 b: 0.722 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+[ 
+World doOneCycle.
+Processor yield.
+false ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		interactiveParser: 	nil
+		activeTranscript: 	Transcript
+
+
+[ 
+self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ 
+World doOneCycle.
+Processor yield.
+false ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	65
+		numArgs: 	0
+
+
+
+--- The full stack ---
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:for:
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:
+[ :exit | ^ self handleExit: exit ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+BlockClosure>>cull:
+[ self exceptionHandlerBlock cull: exception ] in MethodContext(ContextPart)>>handleSignal:
+BlockClosure>>ensure:
+MethodContext(ContextPart)>>handleSignal:
+Exit(Exception)>>signal
+Exit(Exception)>>signal:
+Exit class>>signalFailure:
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure:
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure
+PharoCommandLineHandler(BasicCommandLineHandler)>>error
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleArgument:
+[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | arguments first ]) ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+BlockClosure>>on:do:
+PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+PharoCommandLineHandler>>activate
+PharoCommandLineHandler class(CommandLineHandler class)>>activateWith:
+[ super activateWith: aCommandLine ] in PharoCommandLineHandler class>>activateWith:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+[ 
+World doOneCycle.
+Processor yield.
+false ] in MorphicUIManager>>spawnNewProcess
+[ 
+self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+-------------------------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Error: Command line handler failed
+8 May 2014 10:34:39.972587 am
+
+VM: unix - i686 - linux-gnu - NBCoInterpreter NativeBoost-CogPlugin-GuillermoPolito.19 uuid: acc98e51-2fba-4841-a965-2975997bba66 Dec 26 2013
+NBCogit NativeBoost-CogPlugin-GuillermoPolito.19 uuid: acc98e51-2fba-4841-a965-2975997bba66 Dec 26 2013
+https://github.com/pharo-project/pharo-vm.git Commit: e698e14f38003258fa49506b14307d83863a5ac1 Date: 2013-12-16 06:32:59 -0800 By: Esteban Lorenzano <estebanlm@gmail.com> Jenkins build #14780
+
+Image: Pharo3.0 [Latest update: #30847]
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:for:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+		aCommandLinehandler: 	a PharoCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+[ :exit | ^ self handleExit: exit ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		exit: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+BlockClosure>>cull:
+	Receiver: [ :exit | ^ self handleExit: exit ]
+	Arguments and temporary variables: 
+		anArg: 	Exit: Command line handler failed 1
+	Receiver's instance variables: 
+		outerContext: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		startpc: 	73
+		numArgs: 	1
+
+
+[ self exceptionHandlerBlock cull: exception ] in MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Exit: Command line handler failed 1
+		value: 	nil
+	Receiver's instance variables: 
+		sender: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		pc: 	17
+		stackp: 	3
+		method: 	BlockClosure>>#on:do:
+		closureOrNil: 	nil
+		receiver: 	[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ ...etc...
+
+
+BlockClosure>>ensure:
+	Receiver: [ self exceptionHandlerBlock cull: exception ]
+	Arguments and temporary variables: 
+		aBlock: 	[ self exceptionHandlerIsActive: true ]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	MethodContext(ContextPart)>>handleSignal:
+		startpc: 	99
+		numArgs: 	0
+
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Exit: Command line handler failed 1
+		value: 	nil
+	Receiver's instance variables: 
+		sender: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		pc: 	17
+		stackp: 	3
+		method: 	BlockClosure>>#on:do:
+		closureOrNil: 	nil
+		receiver: 	[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ ...etc...
+
+
+Exit(Exception)>>signal
+	Receiver: Exit: Command line handler failed 1
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	'Command line handler failed'
+		tag: 	nil
+		signaler: 	a PharoCommandLineHandler
+		signalContext: 	Exit(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		status: 	1
+
+
+Exit(Exception)>>signal:
+	Receiver: Exit: Command line handler failed 1
+	Arguments and temporary variables: 
+		signalerText: 	'Command line handler failed'
+	Receiver's instance variables: 
+		messageText: 	'Command line handler failed'
+		tag: 	nil
+		signaler: 	a PharoCommandLineHandler
+		signalContext: 	Exit(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		status: 	1
+
+
+Exit class>>signalFailure:
+	Receiver: Exit
+	Arguments and temporary variables: 
+		aMessage: 	'Command line handler failed'
+	Receiver's instance variables: 
+		superclass: 	Exception
+		methodDict: 	a MethodDictionary(#defaultAction->Exit>>#defaultAction #isSuccess-...etc...
+		format: 	144
+		layout: 	a FixedLayout
+		instanceVariables: 	#('status')
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Exit
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Kernel-Exceptions'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aMessage: 	'Command line handler failed'
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>error
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleArgument:
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aString: 	'---no-default-preferences'
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | arguments first ]) ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+BlockClosure>>on:do:
+	Receiver: [ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | argument...etc...
+	Arguments and temporary variables: 
+		exception: 	Exit
+		handlerAction: 	[ :exit | ^ self handleExit: exit ]
+		handlerActive: 	false
+	Receiver's instance variables: 
+		outerContext: 	PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+		startpc: 	49
+		numArgs: 	0
+
+
+PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler>>activate
+	Receiver: a PharoCommandLineHandler
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a Session
+		stdout: 	a VTermOutputDriver
+		stderr: 	a VTermOutputDriver
+
+
+PharoCommandLineHandler class(CommandLineHandler class)>>activateWith:
+	Receiver: PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aCommandLine: 	a CommandLineArguments
+	Receiver's instance variables: 
+		superclass: 	BasicCommandLineHandler
+		methodDict: 	a MethodDictionary(#activate->PharoCommandLineHandler>>#activate #c...etc...
+		format: 	138
+		layout: 	a FixedLayout
+		instanceVariables: 	nil
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#PharoCommandLineHandler
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'System-CommandLine'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+[ super activateWith: aCommandLine ] in PharoCommandLineHandler class>>activateWith:
+	Receiver: PharoCommandLineHandler
+	Arguments and temporary variables: 
+		aCommandLine: 	a CommandLineArguments
+	Receiver's instance variables: 
+		superclass: 	BasicCommandLineHandler
+		methodDict: 	a MethodDictionary(#activate->PharoCommandLineHandler>>#activate #c...etc...
+		format: 	138
+		layout: 	a FixedLayout
+		instanceVariables: 	nil
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#PharoCommandLineHandler
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'System-CommandLine'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+		queue: 	WaitfreeQueue with 0 items
+		nextInQueue: 	[ super activateWith: aCommandLine ]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldMorph>>runStepMethods
+	Receiver: a WorldMorph(511705088) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (976@662)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a SystemWindow(629932032) an Imag...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.937 g: 0.937 b: 0.937 alpha: 1.0)
+		extension: 	a MorphExtension (552861696) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.861 g: 1.0 b: 0.722 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(511705088) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(760479744))
+		viewBox: 	(0@0) corner: (976@662)
+		canvas: 	a FormCanvas on: DisplayScreen(976x662x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap()
+		lastStepTime: 	976
+		lastStepMessage: 	nil
+		lastCycleTime: 	16587
+		alarms: 	a Heap()
+		lastAlarmTime: 	16566
+		menuBuilder: 	nil
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(511705088) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (976@662)
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(984088576) a SystemWindow(629932032) an Imag...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.937 g: 0.937 b: 0.937 alpha: 1.0)
+		extension: 	a MorphExtension (552861696) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.861 g: 1.0 b: 0.722 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+[ 
+World doOneCycle.
+Processor yield.
+false ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		interactiveParser: 	nil
+		activeTranscript: 	Transcript
+
+
+[ 
+self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ 
+World doOneCycle.
+Processor yield.
+false ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	65
+		numArgs: 	0
+
+
+
+--- The full stack ---
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:for:
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleExit:
+[ :exit | ^ self handleExit: exit ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+BlockClosure>>cull:
+[ self exceptionHandlerBlock cull: exception ] in MethodContext(ContextPart)>>handleSignal:
+BlockClosure>>ensure:
+MethodContext(ContextPart)>>handleSignal:
+Exit(Exception)>>signal
+Exit(Exception)>>signal:
+Exit class>>signalFailure:
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure:
+PharoCommandLineHandler(CommandLineHandler)>>exitFailure
+PharoCommandLineHandler(BasicCommandLineHandler)>>error
+PharoCommandLineHandler(BasicCommandLineHandler)>>handleArgument:
+[ self handleArgument: (self arguments ifEmpty: [ '' ] ifNotEmpty: [ :arguments | arguments first ]) ] in PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+BlockClosure>>on:do:
+PharoCommandLineHandler(BasicCommandLineHandler)>>activate
+PharoCommandLineHandler>>activate
+PharoCommandLineHandler class(CommandLineHandler class)>>activateWith:
+[ super activateWith: aCommandLine ] in PharoCommandLineHandler class>>activateWith:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+[ 
+World doOneCycle.
+Processor yield.
+false ] in MorphicUIManager>>spawnNewProcess
+[ 
+self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+-------------------------------------------------------------------------------
+
