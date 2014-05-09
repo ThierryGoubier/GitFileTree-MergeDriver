@@ -121,3 +121,41 @@ See: the version file and the methodProperties.json file have been merged withou
 (Formatted for an easier reading). Note how id 'e198578e-77db-5e80-b4b5-70e05de13344' is the common ancestor to both branches, and how GitFileTree-MergeDriver has created a proper merge in MC during the git merge.
 
 This is especially important for FileTree and github:// Metacello Urls, since both rely on a correct version file to work. GitFileTree is less dependent in correct results; just the lack of conflicts is a huge boost.
+
+How does this works?
+--------------------
+
+From reading the git man pages, and particularly gitattributes(5), one can note that git has a huge amount of customisation available for different file types, for specific operations: diff, merge, and merge conflict resolutions.
+
+When conflicts occurs, they do appear when git attempts three-way merges between the current version of a file, the version being merged, and the common ancestor. Git has a strategy for doing the merge if the file is considered as text (three way per line merge), and another strategy if the file is considered binary (keep the current one?); git may also do more merges between ancestors to create the common ancestor. For merging, git delegates to a merge driver and can give him up to four parameters: the current file, the _other_ (from the commit to merge), the _ancestor_, and eventually the length of the conflict markers.
+
+From gitattributes, we see that it is possible to define a merge driver, as an external command (in gitconfig), and to associate it to a file (in the attributes).
+
+So, this is what the GitFileTree-MergeDriver uses:
+- version and .json files in FileTree are in fact binary data; git however consider them as text files and tries to merge them as text, which is wrong and creates conflicts.
+- Take Monticello and FileTree code to be able to merge two version files (FileTree for reading the version file as a MCVersionInfo, Monticello for creating a new version merging both branches, FileTree for writing back the version file)
+- Use FileTree json support for reading properties files, choosing an ad-hoc strategy for merging the two versions.
+-- Merging method properties is done by timestamp comparison, with a fall back on epoch if the timestamp can't be parsed (which happens).
+-- Merging class properties (class definition) is done by merging sets of attributes and failing in other cases.
+
+And, by being defined as a merge driver for git and associated with those files, GitFileTree-MergeDriver is called by git on each merge, with the three files: _current_, _other_ and _ancestor_. A correct merge is written back into _current_, a failure to merge is a non-zero return status and git will tell us it is a conflict.
+
+Not all conflicts can be resolved that way. In the resolution of conflicts, we have yet another way of customizing git behavior, by using a specific merge tool for interactive conflict resolution. For example, a common merge will have the following process:
+
+```
+$ git merge aCommit
+...
+Automatic merge failed; fix conflicts and then commit the result.
+$ git merge-tool
+...
+```
+
+The git merge-tool command will call an external GUI tool, such as meld, to let us resolve the conflict by hand by selecting parts of the two versions of the file (_current_ and _other_, with usually _ancestor_ also displayed) to keep or reject.
+
+However, usual tools are not too good at merging .st files :) or version files the merge driver hasn't managed to merge, so the next step after the merge driver would be to implement a merge tool in Smalltalk which knows how to:
+- Interactively let us merge standard text files
+- Handle .st files a bit better (by putting them, for example, in their package context?)
+- Handle conflicting version and properties file as well.
+
+This will be for the future :)
+
