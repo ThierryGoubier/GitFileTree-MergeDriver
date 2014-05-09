@@ -135,8 +135,8 @@ So, this is what the GitFileTree-MergeDriver uses:
 - version and .json files in FileTree are in fact binary data; git however consider them as text files and tries to merge them as text, which is wrong and creates conflicts.
 - Take Monticello and FileTree code to be able to merge two version files (FileTree for reading the version file as a MCVersionInfo, Monticello for creating a new version merging both branches, FileTree for writing back the version file)
 - Use FileTree json support for reading properties files, choosing an ad-hoc strategy for merging the two versions.
--- Merging method properties is done by timestamp comparison, with a fall back on epoch if the timestamp can't be parsed (which happens).
--- Merging class properties (class definition) is done by merging sets of attributes and failing in other cases.
+	- Merging method properties is done by timestamp comparison, with a fall back on epoch if the timestamp can't be parsed (which happens).
+	- Merging class properties (class definition) is done by merging sets of attributes and failing in other cases.
 
 And, by being defined as a merge driver for git and associated with those files, GitFileTree-MergeDriver is called by git on each merge, with the three files: _current_, _other_ and _ancestor_. A correct merge is written back into _current_, a failure to merge is a non-zero return status and git will tell us it is a conflict.
 
