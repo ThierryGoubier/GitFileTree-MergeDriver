@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTimeStampFrom:" : "ThierryGoubier 5/2/2014 13:24",
-		"getVersionInfoFrom:" : "ThierryGoubier 5/1/2014 22:45",
-		"getVersionNoFromName:" : "ThierryGoubier 5/1/2014 22:48",
-		"mergeClassProperties:with:and:" : "ThierryGoubier 4/29/2014 15:13:23",
-		"mergeMethodProperties:with:and:" : "ThierryGoubier 5/2/2014 13:14",
-		"mergeVersion:with:and:" : "ThierryGoubier 5/1/2014 22:50" } }
+		"getTimeStampFrom:" : "ThierryGoubier 5/2/2014 13:27:58",
+		"getVersionInfoFrom:" : "ThierryGoubier 5/2/2014 13:27:58",
+		"getVersionNoFromName:" : "ThierryGoubier 5/30/2014 10:14",
+		"mergeClassProperties:with:and:" : "ThierryGoubier 5/2/2014 13:27:58",
+		"mergeMethodProperties:with:and:" : "ThierryGoubier 5/2/2014 13:27:58",
+		"mergeVersion:with:and:" : "ThierryGoubier 5/30/2014 10:15" } }
