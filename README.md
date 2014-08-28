@@ -35,7 +35,12 @@ Add, in the main repository containing your FileTree packages (for example, top 
 
 Now, you should be able to merge with git and have a minimum of conflicts.
 
-As an example, this is the normal output when merging under git with FileTree (or GitFileTree) packages (with two versions of the SmaCC tutorial in each branch) :
+Note that the merge driver will, under some cases, hide conflicts (or resolve them automatically) when a class definition was changed between branches. If you want those conflicts to appear, then you should remove the following line from your .gitattributes file:
+```
+*.package/*.class/properties.json		merge=mcProperties
+```
+
+As an example of how the merge driver works, this is the normal output when merging under git with FileTree (or GitFileTree) packages (with two versions of the SmaCC tutorial in each branch) :
 ```
 $ git merge aBranch
 Auto-merging SmaCC-Tutorial.package/monticello.meta/version
