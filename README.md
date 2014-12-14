@@ -31,11 +31,13 @@ Add, in the main repository containing your FileTree packages (for example, top 
 *.package/monticello.meta/version		merge=mcVersion
 *.package/*.class/methodProperties.json		merge=mcMethodProperties
 *.package/*.class/properties.json		merge=mcProperties
+*.package/*.extension/methodProperties.json 	merge=mcMethodProperties
+*.package/*.extension/properties.json 		merge=mcProperties
 ```
 
 Now, you should be able to merge with git and have a minimum of conflicts.
 
-Note that the merge driver will, under some cases, hide conflicts (or resolve them automatically) when a class definition was changed between branches. If you want those conflicts to appear, then you should remove the following line from your .gitattributes file:
+Note that the merge driver will, under some cases, hide conflicts (or resolve them automatically) when a class definition was changed between branches (addition or removal of an instance variable). If you want those conflicts to appear, then you should remove the following line from your .gitattributes file:
 ```
 *.package/*.class/properties.json		merge=mcProperties
 ```
