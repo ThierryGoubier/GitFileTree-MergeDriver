@@ -8,4 +8,4 @@ cd - > /dev/null
 # disable parameter expansion to forward all arguments unprocessed to the VM
 set -f
 # run the VM and pass along all arguments as is
-"$DIR"/"pharo/pharo" --nodisplay "$DIR"/pharo/Pharo.image --no-default-preferences mergeDriver "$@"
+"$DIR"/"pharo/pharo" "$DIR"/pharo/Pharo.image --no-default-preferences mergeDriver "$@"
