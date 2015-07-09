@@ -1,7 +1,13 @@
 #!/bin/bash
 # some magic to find out the real location of this script dealing with symlinks
-DIR=`readlink -e "$0"` || DIR="$0";
+DIR=`readlink "$0"` || DIR="$0";
 DIR=`dirname "$DIR"`;
+# Get the true directory name by cd-ing into it, pwd-it and cd-ing back.
+# readlink would allow to do that directly, but only on certain platforms
+# (linux, but not Mac OS X)
+cd "$DIR"
+DIR=`pwd`
+cd - > /dev/null
 # disable parameter expansion to forward all arguments unprocessed to the VM
 set -f
 # run the VM and pass along all arguments as is
