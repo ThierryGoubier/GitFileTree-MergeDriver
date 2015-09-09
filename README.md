@@ -11,7 +11,7 @@ Clone this repository (or get from here the Makefile and the merge script and pu
 $ make
 ```
 
-In your global config file, you should now have the following :
+In your global git config file (typically in `~/.gitconfig`), you should now have something like the following :
 
 ```
 [merge "mcVersion"]
@@ -25,7 +25,7 @@ In your global config file, you should now have the following :
 	driver = pathToGitFileTree-MergeDriver/merge --properties %O %A %B
 ```
 
-Add, in the main repository containing your FileTree packages (for example, top level or repository/), a .gitattributes file containing the following:
+You must now tell git which merge tool to use for which kind of file. This is done in a special attributes file that can be located in many different places  (read `GITATTRIBUTES(5)` man page). For example, in the main repository containing your FileTree packages (for example, top level or `repository/`), add a `.gitattributes` file containing the following lines:
 
 ```
 *.package/monticello.meta/version		merge=mcVersion
@@ -37,7 +37,7 @@ Add, in the main repository containing your FileTree packages (for example, top 
 
 Now, you should be able to merge with git and have a minimum of conflicts.
 
-Note that the merge driver will, under some cases, hide conflicts (or resolve them automatically) when a class definition was changed between branches (addition or removal of an instance variable). If you want those conflicts to appear, then you should remove the following line from your .gitattributes file:
+Note that the merge driver will, under some cases, hide conflicts (or resolve them automatically) when a class definition was changed between branches (addition or removal of an instance variable). If you want those conflicts to appear, then you should remove the following line from your `.gitattributes` file:
 ```
 *.package/*.class/properties.json		merge=mcProperties
 ```
@@ -59,7 +59,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 We have conflicts with monticello.meta/version, three methodProperties.json files, and a .st file
 
-After adding the GitFileTree-MergeDriver (.gitattributes and config and ...), we get the following output when we try the same merge:
+After you followed above setup process, you should get the following output for the same merge:
+
 ```
 $ git reset --hard
 HEAD is now at 4eadb6c Resaving to make sure we have a clean version file
@@ -72,6 +73,7 @@ CONFLICT (add/add): Merge conflict in SmaCC-Tutorial.package/ASTFunctionNode.cla
 Auto-merging SmaCC-Tutorial.package/ASTExpressionNode.class/methodProperties.json
 Automatic merge failed; fix conflicts and then commit the result.
 ```
+
 See: the version file and the methodProperties.json file have been merged without conflict; and, when looking inside, the version file has the two branches versions as ancestors, and a common ancestor as well:
 
 ```smalltalk
@@ -127,7 +129,7 @@ See: the version file and the methodProperties.json file have been merged withou
 ```
 (Formatted for an easier reading). Note how id 'e198578e-77db-5e80-b4b5-70e05de13344' is the common ancestor to both branches, and how GitFileTree-MergeDriver has created a proper merge in MC during the git merge.
 
-This is especially important for FileTree and github:// Metacello Urls, since both rely on a correct version file to work. GitFileTree is less dependent in correct results; just the lack of conflicts is a huge boost.
+This is especially important for `FileTree` and `github://` Metacello Urls, since both rely on a correct version file to work. GitFileTree is less dependent in correct results; just the lack of conflicts is a huge boost.
 
 How does this works?
 --------------------
@@ -165,4 +167,3 @@ However, usual tools are not too good at merging .st files :) or version files t
 - Handle conflicting version and properties file as well.
 
 This will be for the future :)
-
