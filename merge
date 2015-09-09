@@ -10,5 +10,10 @@ DIR=`pwd`
 cd - > /dev/null
 # disable parameter expansion to forward all arguments unprocessed to the VM
 set -f
+# Use the PHARO_VM environment variable to indicate where to find the
+# Pharo VM. If the environment variable is not set, set it to a newly
+# downloaded VM.
+PHARO_VM=${PHARO_VM:-$DIR/pharo/pharo}
+
 # run the VM and pass along all arguments as is
-"$DIR"/"pharo/pharo" "$DIR"/pharo/Pharo.image --no-default-preferences mergeDriver "$@"
+"$PHARO_VM" "$DIR"/pharo/Pharo.image --no-default-preferences mergeDriver "$@"
