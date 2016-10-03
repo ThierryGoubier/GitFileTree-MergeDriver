@@ -14,6 +14,8 @@ pharo/Pharo.image:
 	git config --global merge.mcMethodProperties.driver "`pwd`/merge --methodProperties %O %A %B"
 	git config --global merge.mcProperties.name "GitFileTree MergeDriver for Monticello"
 	git config --global merge.mcProperties.driver "`pwd`/merge --properties %O %A %B"
+	git config --global mergetool.mcmerge.cmd "`pwd`/merge --mergetool \$$BASE \$$LOCAL \$$REMOTE \$$MERGED"
+
 
 all: pharo/Pharo.image
 
