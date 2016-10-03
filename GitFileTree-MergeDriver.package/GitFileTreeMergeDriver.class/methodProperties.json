@@ -2,9 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTimeStampFrom:" : "ThierryGoubier 5/2/2014 13:27:58",
-		"getVersionInfoFrom:" : "ThierryGoubier 5/2/2014 13:27:58",
-		"getVersionNoFromName:" : "ThierryGoubier 5/30/2014 10:14",
-		"mergeClassProperties:with:and:" : "ThierryGoubier 5/2/2014 13:27:58",
-		"mergeMethodProperties:with:and:" : "ThierryGoubier 5/2/2014 13:27:58",
-		"mergeVersion:with:and:" : "ThierryGoubier 5/30/2014 10:15" } }
+		"getTimeStampFrom:" : "ThierryGoubier 5/30/2014 10:17:09",
+		"getVersionInfoFrom:" : "ThierryGoubier 5/30/2014 10:17:09",
+		"getVersionNoFromName:" : "ThierryGoubier 5/30/2014 10:17:09",
+		"mergeClassProperties:with:and:" : "HolgerHansPeterFreyther 10/3/2016 13:29",
+		"mergeClassProperties:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 13:28",
+		"mergeMethodProperties:with:and:" : "HolgerHansPeterFreyther 10/3/2016 13:29",
+		"mergeMethodProperties:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 13:30",
+		"mergeVersion:with:and:" : "HolgerHansPeterFreyther 10/3/2016 13:31",
+		"mergeVersion:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 13:31" } }

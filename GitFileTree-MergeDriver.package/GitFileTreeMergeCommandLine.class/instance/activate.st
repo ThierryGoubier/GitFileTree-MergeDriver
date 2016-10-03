@@ -14,5 +14,9 @@ activate
 		ifTrue: [ 
 			self mergeProperties.
 			^ self exitSuccess ].
+	(self hasOption: 'mergetool')
+		ifTrue: [
+			self mergetool.
+			^ self exitSuccess ].
 	self printHelp.
 	^ self exitFailure
