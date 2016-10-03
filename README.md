@@ -23,6 +23,8 @@ In your global git config file (typically in `~/.gitconfig`), you should now hav
 [merge "mcProperties"]
 	name = GitFileTree MergeDriver for Monticello
 	driver = pathToGitFileTree-MergeDriver/merge --properties %O %A %B
+[mergetool "mcmerge"]
+        cmd = pathToGitFileTree-MergeDriver/merge --mergetool $BASE $LOCAL $REMOTE $MERGED
 ```
 
 You must now tell git which merge tool to use for which kind of file. This is done in a special attributes file that can be located in many different places  (read `GITATTRIBUTES(5)` man page). For example, in the main repository containing your FileTree packages (for example, top level or `repository/`), add a `.gitattributes` file containing the following lines:
@@ -41,6 +43,10 @@ Note that the merge driver will, under some cases, hide conflicts (or resolve th
 ```
 *.package/*.class/properties.json		merge=mcProperties
 ```
+
+Note also that some git commands, such as `git cherry-pick` and `git rebase` do not trigger the use of the merge driver. For 
+those cases, the merge driver is also registered as a merge tool, and can be used after one of those commands if it creates
+conflicts on metadata by using `git merge-tool -tool=mcmerge`.
 
 As an example of how the merge driver works, this is the normal output when merging under git with FileTree (or GitFileTree) packages (with two versions of the SmaCC tutorial in each branch) :
 ```
