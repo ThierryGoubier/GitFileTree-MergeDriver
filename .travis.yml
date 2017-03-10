@@ -11,5 +11,5 @@ before_script:
 
 
 script:
-    - make install
+    - make
     - bash resources/scripts/tests.sh
