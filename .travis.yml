@@ -1,9 +1,6 @@
 language: bash
 sudo: true
 
-os:
-	- linux
-
 before_script:
     	- sudo dpkg --add-architecture i386
 	- sudo apt-get update
