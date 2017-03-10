@@ -2,13 +2,13 @@ language: bash
 sudo: true
 
 before_script:
-    	- sudo dpkg --add-architecture i386
-	- sudo apt-get update
-	- sudo apt-get --yes install libasound2:i386 libasound2-plugins:i386 libcairo2:i386
-	- sudo apt-get --yes install libssl1.0.0:i386 libfreetype6:i386 libx11:i386 libsm:i386 libice:i386
-	- sudo apt-get --yes install libgl1-mesa-glx:i386
+    - sudo dpkg --add-architecture i386
+    - sudo apt-get update
+    - sudo apt-get --yes install libasound2:i386 libasound2-plugins:i386 libcairo2:i386
+    - sudo apt-get --yes install libssl1.0.0:i386 libfreetype6:i386 libx11:i386 libsm:i386 libice:i386
+    - sudo apt-get --yes install libgl1-mesa-glx:i386
 
 
 script:
-	- make install
-	- bash resources/scripts/tests.sh
+    - make install
+    - bash resources/scripts/tests.sh
