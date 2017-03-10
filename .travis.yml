@@ -1,5 +1,6 @@
 language: bash
 sudo: true
+dist: trusty
 
 before_script:
     - sudo dpkg --add-architecture i386
