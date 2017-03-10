@@ -1,0 +1,14 @@
+{
+	"category" : "LightsOut",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"mouseAction" ],
+	"name" : "LOCell",
+	"pools" : [
+		 ],
+	"super" : "SimpleSwitchMorph",
+	"type" : "normal" }
