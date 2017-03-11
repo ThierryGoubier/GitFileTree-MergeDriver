@@ -1,5 +1,5 @@
 
-(cd testMergeDriver; git checkout branch2; git merge branch1)
+(cd testMergeDriver; git checkout branch2; git merge --no-edit branch1)
 if [ $? -eq 0 ]; then
 	echo "git merge should have failed"
 	exit_code=1
