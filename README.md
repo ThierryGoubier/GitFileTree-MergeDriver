@@ -1,6 +1,8 @@
 GitFileTree-MergeDriver
 =======================
 
+[![Build Status](https://travis-ci.org/ThierryGoubier/GitFileTree-MergeDriver.svg?branch=master)](https://travis-ci.org/ThierryGoubier/GitFileTree-MergeDriver)
+
 This is a merge driver for git. It handles merging conflict-prone files in FileTree, which are: monticello.meta/version, methodProperties.json and properties.json.
 
 How to make it work:

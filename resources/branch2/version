@@ -1,0 +1,3 @@
+(name 'LightsOut-ThierryGoubier.3' message 'LOCell initialize-release protocol' id 'df71e399-0284-4fd9-878b-49c2c3206f57' date '6 May 2014' time '2:35:25.964876 pm' author 'ThierryGoubier' ancestors ((name 'LightsOut-ThierryGoubier.2' message 'initialize
+' id 'acd098d8-091d-5530-ad0b-7488c0994da5' date '6 May 2014' time '2:16:07 pm' author 'ThierryGoubier' ancestors ((name 'LightsOut-ThierryGoubier.1' message 'First version
+' id '3f7d0d1a-6e57-5fc3-b177-ec7149c70a5f' date '6 May 2014' time '2:14:32 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())

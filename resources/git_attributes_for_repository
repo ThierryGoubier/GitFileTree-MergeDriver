@@ -1,0 +1,3 @@
+version merge=mcVersion
+methodProperties.json merge=mcMethodProperties
+properties.json merge=mcProperties
