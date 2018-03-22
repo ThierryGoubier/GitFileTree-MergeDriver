@@ -1,14 +1,11 @@
 {
-	"category" : "GitFileTree-MergeDriver",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "GitFileTreeMergeCommandLine",
-	"pools" : [
-		 ],
 	"super" : "CommandLineHandler",
-	"type" : "normal" }
+	"category" : "GitFileTree-MergeDriver",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GitFileTreeMergeCommandLine",
+	"type" : "normal"
+}
