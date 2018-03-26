@@ -7,7 +7,8 @@ PHARO_VM ?= 'pharo/pharo'
 
 pharo/Pharo.image:
 	mkdir pharo
-	cd pharo; wget -O- get.pharo.org/60-minimal+vm | bash
+	cd pharo; wget -O- get.pharo.org/61-minimal | bash
+	cd pharo; wget -O- get.pharo.org/vm61 | bash
 	$(PHARO_VM) pharo/Pharo.image --no-default-preferences eval --save Gofer new url: \'http://ss3.gemstone.com/ss/STON\'\; package: \'STON-Core\'\; load
 	$(PHARO_VM) pharo/Pharo.image --no-default-preferences eval --save Gofer new url: \'http://smalltalkhub.com/mc/ThierryGoubier/Alt30/main/\'\; package: \'GitFileTree-MergeDriver\'\; load
 	git config --global merge.mcVersion.driver "`pwd`/merge --version %O %A %B"
