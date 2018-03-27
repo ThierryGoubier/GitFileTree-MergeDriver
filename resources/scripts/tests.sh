@@ -4,7 +4,7 @@ echo $DIR
 cd $DIR
 mkdir ../test
 tests_status=0
-(cd ../test; pwd; ../scripts/setup.sh; ../scripts/failIfNotSet.sh)
+(cd ../test; ../scripts/setup.sh; ../scripts/failIfNotSet.sh)
 if [ $? -ne 0 ]; then
 	tests_status=1
 fi

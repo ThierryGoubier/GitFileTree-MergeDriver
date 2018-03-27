@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"getTimeStampFrom:" : "ThierryGoubier 5/30/2014 10:17:09",
-		"getVersionInfoFrom:" : "ThierryGoubier 5/30/2014 10:17:09",
-		"getVersionNoFromName:" : "ThierryGoubier 5/30/2014 10:17:09",
-		"mergeClassProperties:with:and:" : "HolgerHansPeterFreyther 10/3/2016 13:29",
-		"mergeClassProperties:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 13:28",
-		"mergeMethodProperties:with:and:" : "HolgerHansPeterFreyther 10/3/2016 13:29",
-		"mergeMethodProperties:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 13:30",
-		"mergeVersion:with:and:" : "HolgerHansPeterFreyther 10/3/2016 13:31",
-		"mergeVersion:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 13:31" } }
+		"getTimeStampFrom:" : "HolgerHansPeterFreyther 10/3/2016 14:54:37",
+		"mergeMethodProperties:with:and:" : "ThierryGoubier 3/22/2018 14:53:05",
+		"mergeClassProperties:with:and:" : "HolgerHansPeterFreyther 10/3/2016 14:54:37",
+		"mergeMethodProperties:with:and:result:" : "ThierryGoubier 3/27/2018 15:03",
+		"mergeVersion:with:and:" : "HolgerHansPeterFreyther 10/3/2016 14:54:37",
+		"mergeVersion:with:and:result:" : "HolgerHansPeterFreyther 10/3/2016 14:54:37",
+		"mergeClassProperties:with:and:result:" : "ThierryGoubier 3/27/2018 15:03",
+		"getVersionInfoFrom:" : "HolgerHansPeterFreyther 10/3/2016 14:54:37",
+		"getVersionNoFromName:" : "HolgerHansPeterFreyther 10/3/2016 14:54:37"
+	},
+	"class" : { }
+}

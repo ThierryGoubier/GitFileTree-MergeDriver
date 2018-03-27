@@ -1,14 +1,11 @@
 {
-	"category" : "GitFileTree-MergeDriver",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "GitFileTreeMergeDriver",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "GitFileTree-MergeDriver",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GitFileTreeMergeDriver",
+	"type" : "normal"
+}
