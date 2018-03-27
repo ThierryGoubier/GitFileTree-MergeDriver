@@ -1,3 +1,0 @@
-(name 'RPNCalculator-ThierryGoubier.3' message 'Operations add and negate' id 'f662d8d2-c424-0d00-8da7-970b09c4034c' date '27 March 2018' time '1:21:06.828774 pm' author 'ThierryGoubier' ancestors ((name 'RPNCalculator-ThierryGoubier.2' message 'Add t, add operations, add testStack
-' id '9325bd0c-3db2-56a0-a550-4dccdff583d1' date '27 March 2018' time '11:39:15 am' author 'ThierryGoubier' ancestors ((name 'RPNCalculator-ThierryGoubier.1' message 'First save
-' id 'a71ac828-6cf7-5b40-8e10-cd1272435fbd' date '27 March 2018' time '11:25:10 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())
