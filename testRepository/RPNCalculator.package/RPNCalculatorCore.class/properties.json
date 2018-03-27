@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "RPNCalculator",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"x",
+		"y",
+		"z"
+	],
+	"name" : "RPNCalculatorCore",
+	"type" : "normal"
+}
