@@ -23,4 +23,9 @@ mergeMethodProperties: ancestor with: current and: other result: result
 	result exists
 		ifTrue: [ result delete ].
 	result
-		writeStreamDo: [ :s | STON put: mergedProperties asJsonOnStreamPretty: s ]
+		writeStreamDo: [ :s | 
+			s
+				nextPutAll:
+					(String
+						streamContents: [ :s2 | STON put: mergedProperties asJsonOnStreamPretty: s2 ])
+						withUnixLineEndings ]
