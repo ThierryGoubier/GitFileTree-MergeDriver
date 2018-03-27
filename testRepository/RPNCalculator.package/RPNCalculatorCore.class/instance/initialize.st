@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	x := y := z := 0
+	x := y := z := t := 0

@@ -1,16 +1,13 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "Object",
+	"commentStamp" : "",
+	"super" : "TestCase",
 	"category" : "RPNCalculator",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"x",
-		"y",
-		"z",
-		"t"
+		"core"
 	],
-	"name" : "RPNCalculatorCore",
+	"name" : "RPNCalculatorCoreTests",
 	"type" : "normal"
 }
